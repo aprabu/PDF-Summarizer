@@ -7,6 +7,8 @@
     <title>PDF Summarizer</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
+    <title>PDF Summarizer</title>
 </head>
 
 <body>
@@ -14,18 +16,20 @@
         <h1>PDF Summarizer</h1>
         <h2>Created by <a id="aplink" href="https://aadhavprabu.com">Aadhav Prabu</a></h2>
         <p>Please click below to upload a PDF to summarize:</p>
+        <input type="file" accept=".pdf" id="fileInput" style="display: none;">
+        <label for="fileInput" id="upload" class="upload">Upload PDF</label>
         <div class="input-container">
-            <label for="level" id="selectLevel">How long would you like your summary to be?</label>
+            <label for="length" id="selectLength">How long would you like your summary to be?</label>
             <div class="slidecontainer">
                 <label id="lowBound" class="sliderLabel">Short</label>
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                 <label id="highBound" class="sliderLabel">Long</label>
               </div>
-            <button id="summarizeBtn">Summarize!</button>
+            <button id="summarizeBtn" class="hidden">Summarize!</button>
         </div>
         <div id="summaryContainer" class="hidden">
-            <h2 id="ccHeading"></h2>
-            <p id="summary"></p>
+            <p id="summaryHeading"></p>
+            <h2 id="summary"></h2>
         </div>
     </div>
     <script src="script.js"></script>
