@@ -1,4 +1,4 @@
-const apiKeyRaw = 'xImfIynhSKdCY0t3MiQIT3BlbkFJI6rODmucWu4o3okbn2z5';
+const apiKeyRaw = 'TmdSeeul3lbN8SLQDJRxT3BlbkFJ4lxPBzC6eYIDNZpbhxoi';
 const apiKeyStart = 'sk-'
 
 document.getElementById("myRange").oninput = function() {
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             summaryElement.textContent = summary;
         } else {
             error = new Error('Invalid response format.');
-            summaryElement.textContent = 'An error occurred while generating your CrashCourse. Please try again later.\nError: ' + error;
+            summaryElement.textContent = 'An error occurred while generating your summary. Please try again later.\nError: ' + error;
             throw error;
         }
     })
