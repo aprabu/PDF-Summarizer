@@ -40,6 +40,7 @@ a {
 p {
     color: #ff5958;
     font-weight: 800;
+    margin-top: 30px;
 }
 
 .input-container {
@@ -59,27 +60,51 @@ input[type="text"]{
 }
 
 label {
-    padding-top: 20px;
+    padding-top: 10px;
     font-weight: 700;
     color: #ff5958;
 }
 
-select {
-    color: #49b0e8;
-    font-size: 14px;
-    margin: 5px;
-    margin-top: 10px;
-    padding: 8px;
-    border: 2px solid #49b0e8;
-    border-radius: 20px;
+.sliderLabel {
+    margin: 0 20px;
+    font-size: 13px;
 }
 
-button {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+.slidecontainer {
+    margin-top: 10px;
+    width: 350px;
+    display: flex;
+    align-items: center;
 }
+
+.slider {
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    background: #d3d3d3;
+    background: linear-gradient(to right, #49b0e8 0%, #49b0e8 50%, #d3d3d3 50%, #d3d3d3 100%);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.3s, transform 0.3s;
+    border-radius: 15px;
+    margin-top: 22px;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff5958;
+    cursor: pointer;
+    border-radius: 15px;
+  }
 
 button {
     background-color: #49b0e8;
@@ -89,7 +114,7 @@ button {
     border-radius: 20px;
     padding: 10px 20px;
     margin: 5px;
-    margin-top: 20px;
+    margin-top: 35px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     min-width: 200px;
@@ -100,8 +125,33 @@ button:hover {
     transform: scale(1.1);
   }
 
+.upload {
+    background-color: #49b0e8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 100;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 100px;
+}
+
+.upload:hover {
+    background-color: #ff5958;
+}
+
 #summaryContainer {
     margin-top: 30px;
+}
+
+#fileName {
+    color: #777777;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 100;
 }
 
 .hidden {
