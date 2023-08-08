@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrashCourseMe</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CrashCourseMe</h1>
+        <h2>Created by <a id="aplink" href="https://aadhavprabu.com">Aadhav Prabu</a></h2>
+        <p>Enter a topic you'd like a crash course on:</p>
+        <div class="input-container">
+            <input type="text" id="topic" placeholder="Topic" required>
+            <label for="level" id="selectLevel">Select your level of experience with the topic:</label>
+            <select id="level">
+                <option value="beginner">Beginner</option>
+                <option value="medium">Medium</option>
+                <option value="expert">Expert</option>
+            </select>
+            <button id="summarizeBtn">CrashCourseMe</button>
+        </div>
+        <div id="summaryContainer" class="hidden">
+            <h2 id="ccHeading"></h2>
+            <p id="summary"></p>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
